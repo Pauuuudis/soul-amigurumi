@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Amigurumii · Producto</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@300;400;600;700&family=Caveat:wght@500&family=Mrs+Saint+Delafield&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Iconos (los mismos de index.html) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-yarn" viewBox="0 0 24 24"><circle cx="11" cy="12" r="8.5"/><path d="M4 9.5c4.5.3 8.5 3.5 10.5 9M6.8 5c4.6 1 8.6 4.6 10 10M11 3.5c3 1.6 6 5 6.8 9.3M19 15.5c2.5.4 3.5 2.4 2.5 4.5"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- NAVEGACIÓN (igual que en index.html, pero los links llevan de vuelta al inicio) -->
+  <nav>
+    <a class="logo" href="index.html" aria-label="Soul Amigurumii, ir al inicio">
+      <img src="assets/img/logo.png" alt="Soul Amigurumii" class="logo-img">
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Inicio</a></li>
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="index.html#nosotros">Nosotros</a></li>
+      <li><a href="index.html#promos">Promos</a></li>
+      <li><a href="index.html#custom">Personalizados</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="cart-icon-container" onclick="toggleCart()" role="button" aria-label="Abrir carrito">
+        <svg class="ic"><use href="#i-cart" /></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR DEL PRODUCTO -->
+  <div id="product-root">
+    <!-- Renderizado por JS -->
+  </div>
+
+  <!-- SISTEMA DE COMENTARIOS -->
+  <section class="comments-section">
+    <div class="section-title">
+      <p class="eyebrow">Opiniones</p>
+      <h2>Opiniones con amor</h2>
+      <div class="divider"></div>
+      <p>Lo que dicen nuestras clientas de esta creación</p>
+    </div>
+
+    <form id="comment-form" class="comment-form">
+      <input type="text" id="comment-name" placeholder="Tu nombre" required>
+      <textarea id="comment-text" placeholder="Cuéntanos tu experiencia..." required></textarea>
+      <button type="submit" class="btn btn-primary btn-block">Compartir experiencia</button>
+    </form>
+
+    <div class="comments-list" id="comments-list">
+      <!-- Comentarios cargados desde Firebase -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <span class="logo-soul">Soul</span>
+          <svg class="ic logo-ball"><use href="#i-yarn" /></svg>
+          <span class="logo-sub">&amp;Amigurumii</span>
+        </a>
+        <p>El arte de dar vida en cada puntada.<br>Amigurumis tejidos a mano con amor.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a href="index.html#productos">Productos</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#promos">Promos</a>
+        <a href="index.html#custom">Personalizados</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sigue</h4>
+        <div class="footer-social">
+          <a href="https://instagram.com/soul_amigurumii" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram" /></svg></a>
+          <a href="https://tiktok.com/@soul_amigurumii" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tiktok" /></svg></a>
+          <a href="https://wa.me/573009749120" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#i-whatsapp" /></svg></a>
+        </div>
+      </div>
+      <div class="footer-col footer-cta">
+        <h4>Hablemos</h4>
+        <p>¿Tienes una idea especial?<br>Escríbeme y la hacemos realidad.</p>
+        <a class="btn btn-outline btn-sm" href="https://wa.me/573009749120" target="_blank" rel="noopener">Escríbeme por WhatsApp
+          <svg class="ic"><use href="#i-heart" /></svg></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Soul Amigurumii · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- CARRITO DE COMPRAS MODAL -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-header">
+      <h3>Tu pedido</h3>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-body">
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-options">
+        <h4>Personaliza tu pedido</h4>
+        <label class="checkbox-label">
+          <input type="checkbox" id="cart-opt-premium" onchange="renderCart()">
+          Empaque premium personalizado (+$5.000)
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="cart-opt-card" onchange="renderCart()">
+          Tarjeta personalizada (sin costo)
+        </label>
+        <textarea id="cart-msg" class="cart-msg" placeholder="Mensaje especial o dedicatoria..."></textarea>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-box">
+        <span>Total estimado:</span>
+        <span class="cart-total" id="cart-total">$0</span>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="generateWhatsAppMessage()">Finalizar pedido</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Producto agregado 💖</div>
+
+  <!-- Barra flotante carrito móvil -->
+  <div class="floating-cart-bar" id="floating-cart-bar" onclick="toggleCart()">
+    <div id="floating-cart-total">0 productos | $0</div>
+    <button class="btn btn-primary btn-sm">Ver carrito</button>
+  </div>
+
+  <!-- FIREBASE CONFIG & LOGIC -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+    // ⚠️ REEMPLAZA ESTA CONFIGURACIÓN CON LA DE TU PROYECTO FIREBASE
+    const firebaseConfig = {
+      // apiKey: "TU_API_KEY",
+      // authDomain: "TU_PROYECTO.firebaseapp.com",
+      // projectId: "TU_PROYECTO",
+      // storageBucket: "TU_PROYECTO.appspot.com",
+      // messagingSenderId: "TU_SENDER_ID",
+      // appId: "TU_APP_ID"
+    };
+
+    let db = null;
+    try {
+      if (Object.keys(firebaseConfig).length > 0) {
+        const app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+      }
+    } catch (e) {
+      console.warn("Firebase no está configurado aún. Comentarios deshabilitados.");
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    const form = document.getElementById('comment-form');
+    const commentsList = document.getElementById('comments-list');
+
+    if (productId && db) {
+      const q = query(collection(db, "productos", productId, "comentarios"), orderBy("fecha", "desc"));
+      onSnapshot(q, (snapshot) => {
+        commentsList.innerHTML = "";
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          const date = data.fecha ? new Date(data.fecha.toDate()).toLocaleDateString('es-CO') : 'Recientemente';
+          
+          commentsList.innerHTML += `
+            <div class="comment-card">
+              <div class="comment-header">
+                <span class="comment-name">${data.nombre}</span>
+                <span class="comment-date">${date}</span>
+              </div>
+              <div class="comment-text">${data.mensaje}</div>
+            </div>
+          `;
+        });
+      }, (error) => {
+        console.warn("Error al cargar comentarios: ", error);
+        commentsList.innerHTML = `<p style="text-align:center;color:var(--brown-light);">No se pudieron cargar los comentarios en este momento.</p>`;
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('comment-name').value;
+        const text = document.getElementById('comment-text').value;
+
+        try {
+          await addDoc(collection(db, "productos", productId, "comentarios"), {
+            nombre: name,
+            mensaje: text,
+            fecha: serverTimestamp()
+          });
+          form.reset();
+        } catch (e) {
+          console.error("Error adding document: ", e);
+          alert("Hubo un error al publicar tu comentario.");
+        }
+      });
+    } else {
+      commentsList.innerHTML = `<p style="text-align:center;color:var(--brown-light);">Los comentarios en tiempo real estarán disponibles en cuanto conectes Firebase 💖.<br><br>Por ahora puedes probar la galería arriba.</p>`;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Debes configurar Firebase para poder enviar comentarios reales.');
+      });
+    }
+  </script>
+
+  <!-- LÓGICA PRINCIPAL (CARRITO Y PRODUCTOS) -->
+  <script src="script.js"></script>
+
+  <!-- LÓGICA DE LA PÁGINA DE PRODUCTO -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+      
+      let foundProduct = null;
+      let foundCategory = null;
+      let prodIndex = -1;
+
+      for (const cat in products) {
+        const index = products[cat].findIndex(p => p.id === productId);
+        if (index !== -1) {
+          foundProduct = products[cat][index];
+          foundCategory = cat;
+          prodIndex = index;
+          break;
+        }
+      }
+
+      const root = document.getElementById('product-root');
+      if (!foundProduct) {
+        root.innerHTML = '<div style="text-align:center; padding: 10rem 2rem;"><h2 style="font-size: 2.8rem;">Producto no encontrado</h2><a href="index.html" class="btn btn-primary" style="margin-top:2rem;">Volver al inicio</a></div>';
+        return;
+      }
+
+      window.changeImage = function(index) {
+        const mainContainer = document.getElementById('main-image-container');
+        const imgContent = foundProduct.images[index];
+        
+        mainContainer.innerHTML = mediaHTML(imgContent, foundProduct.name);
+
+        document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+          if (i === index) thumb.classList.add('active');
+          else thumb.classList.remove('active');
+        });
+      };
+
+      let thumbnailsHtml = '';
+      if (foundProduct.images && foundProduct.images.length > 0) {
+        foundProduct.images.forEach((img, i) => {
+          const safeContent = mediaHTML(img, foundProduct.name);
+          const activeClass = i === 0 ? 'active' : '';
+          thumbnailsHtml += `
+            <div class="thumbnail ${foundProduct.bg} ${activeClass}" onclick="changeImage(${i})">
+              ${safeContent}
+            </div>
+          `;
+        });
+      }
+
+      let videoHtml = '';
+      if (foundProduct.video) {
+        videoHtml = `
+          <video class="product-video" controls>
+            <source src="${foundProduct.video}" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        `;
+      }
+
+      let firstImageContent = foundProduct.images && foundProduct.images.length > 0 ? foundProduct.images[0] : foundProduct.img;
+      const firstImageSafe = mediaHTML(firstImageContent, foundProduct.name);
+
+      root.innerHTML = `
+        <div class="product-detail-container">
+          <div class="product-gallery">
+            <div class="main-image-container ${foundProduct.bg}" id="main-image-container">
+              ${firstImageSafe}
+            </div>
+            <div class="thumbnails-container">
+              ${thumbnailsHtml}
+            </div>
+            ${videoHtml}
+          </div>
+          <div class="product-info">
+            <div class="category-tag">${foundCategory}</div>
+            <h1>${foundProduct.name}</h1>
+            <div class="price">${foundProduct.price}</div>
+            <div class="desc">
+              ${foundProduct.desc}
+            </div>
+            <button class="btn btn-primary btn-lg" style="margin-top: 0.8rem; width: 100%; max-width: 320px;" onclick="addToCart(${prodIndex}, '${foundCategory}')">
+              Agregar al carrito
+            </button>
+            <a href="index.html#productos" class="btn btn-outline" style="width: 100%; max-width: 320px;">
+              Volver a productos
+            </a>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Amigurumii · El arte de dar vida en cada puntada</title>
+  <link rel="icon" href="assets/img/logo.png">
+
+  <!-- ============================================================
+       🔤 FUENTES (Google Fonts — necesita internet)
+       · Cormorant Garamond → títulos elegantes
+       · Nunito             → textos y botones
+       · Caveat             → notitas escritas a mano
+       · Mrs Saint Delafield → "Soul" del logo
+       Si cambias una, cámbiala también en style.css (font-family)
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@300;400;600;700&family=Caveat:wght@500&family=Mrs+Saint+Delafield&display=swap"
+    rel="stylesheet">
+
+  <!-- 🎨 ESTILOS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ICONOS — Se definen una sola vez aquí y se usan en toda la web con:
+       <svg class="ic"><use href="#i-nombre"/></svg>
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-yarn" viewBox="0 0 24 24"><circle cx="11" cy="12" r="8.5"/><path d="M4 9.5c4.5.3 8.5 3.5 10.5 9M6.8 5c4.6 1 8.6 4.6 10 10M11 3.5c3 1.6 6 5 6.8 9.3M19 15.5c2.5.4 3.5 2.4 2.5 4.5"/></symbol>
+      <symbol id="i-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><g><ellipse cx="12" cy="6" rx="2.6" ry="3.4"/><ellipse cx="12" cy="6" rx="2.6" ry="3.4" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6" rx="2.6" ry="3.4" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6" rx="2.6" ry="3.4" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6" rx="2.6" ry="3.4" transform="rotate(288 12 12)"/></g></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+      <symbol id="i-bear" viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7"/><circle cx="6.2" cy="6.6" r="2.6"/><circle cx="17.8" cy="6.6" r="2.6"/><path d="M9.8 15.8c1.2 1 3.2 1 4.4 0"/><circle cx="9.5" cy="12.2" r=".5" fill="currentColor"/><circle cx="14.5" cy="12.2" r=".5" fill="currentColor"/></symbol>
+      <symbol id="i-earring" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 6.3V10"/><circle cx="12" cy="15" r="5"/><path d="M12 12v6M9.5 15h5"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4.5 19.5c0-9.5 5-14.5 15-15 0 10-5 15-15 15z"/><path d="M4.5 19.5 14 10"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></symbol>
+    </defs>
+  </svg>
+
+
+  <!-- ============================================================
+     NAVEGACIÓN
+     Menú superior (logo · links · carrito)
+     Para agregar una sección nueva: copia un <li> y cambia el nombre
+     ============================================================ -->
+  <nav>
+    <!-- 🖼️ LOGO — está hecho con texto. Si prefieres usar una imagen,
+         cambia todo el <a class="logo"> por:
+         <a class="logo" onclick="showSection('home')"><img src="assets/img/logo-horizontal.png" alt="Soul Amigurumii" style="height:48px"></a> -->
+    <a class="logo" onclick="showSection('home')" aria-label="Soul Amigurumii, ir al inicio">
+    <img src="assets/img/logo.png" alt="Soul Amigurumii" class="logo-img">
+      </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a data-section="home" onclick="showSection('home')">Inicio</a></li>
+      <li><a data-section="productos" onclick="showSection('productos')">Productos</a></li>
+      <li><a data-section="nosotros" onclick="showSection('nosotros')">Nosotros</a></li>
+      <li><a data-section="promos" onclick="showSection('promos')">Promos</a></li>
+      <li><a data-section="custom" onclick="showSection('custom')">Personalizados</a></li>
+      <li><a data-section="contacto" onclick="showSection('contacto')">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="cart-icon-container" onclick="toggleCart()" role="button" aria-label="Abrir carrito">
+        <svg class="ic"><use href="#i-cart" /></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+      <!-- Botón hamburguesa — aparece solo en celular -->
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+     SECCIÓN: INICIO (home)
+     Lo primero que ve la persona al entrar
+     ============================================================ -->
+  <div id="home">
+
+    <!-- HERO — banner principal -->
+    <section class="hero">
+      <!-- Decoraciones (están en assets/deco/) -->
+      <img class="deco deco-daisy" src="assets/deco/daisy.svg" alt="" aria-hidden="true">
+      <img class="deco deco-heart-outline" src="assets/deco/heart.svg" alt="" aria-hidden="true">
+      <svg class="deco deco-heart-pink" aria-hidden="true"><use href="#i-heart" /></svg>
+
+      <div class="hero-text">
+        <p class="eyebrow">El arte de dar <span>vida</span></p>
+        <h1>en cada<br>puntada</h1>
+        <p class="hero-sub">
+          Cada pieza nace de hilo, paciencia y mucho cariño.
+          Amigurumis, ramos y accesorios tejidos que llevan
+          un pedacito de alma en cada nudo.
+        </p>
+
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="showSection('productos')">Ver productos
+            <svg class="ic"><use href="#i-heart" /></svg></button>
+          <button class="btn btn-outline" onclick="showSection('custom')">Pide el tuyo</button>
+        </div>
+
+        <ul class="hero-features">
+          <li><svg class="ic"><use href="#i-yarn" /></svg>Hechos a mano</li>
+          <li><svg class="ic"><use href="#i-flower" /></svg>Con amor</li>
+          <li><svg class="ic"><use href="#i-gift" /></svg>Listos para regalar</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <!-- 📷 FOTO PRINCIPAL → guarda tu foto como assets/img/hero.jpg (vertical, 800×1000 px) -->
+        <figure class="hero-photo">
+          <div class="ph"><img src="assets/img/hero.jpg" alt="Amigurumi de Soul Amigurumii" onerror="this.style.display='none'"></div>
+        </figure>
+
+        <!-- Notita pegada — edita el texto cuando quieras -->
+        <div class="paper-note">
+          <span class="tape"></span>
+          Ramos tejidos que nunca se marchitan
+          <svg class="ic"><use href="#i-heart" /></svg>
+        </div>
+
+        <!-- Sello redondo -->
+        <div class="badge-round" aria-hidden="true">
+          <svg class="badge-text" viewBox="0 0 200 200">
+            <defs><path id="badge-circle" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0" /></defs>
+            <text><textPath href="#badge-circle" textLength="470" lengthAdjust="spacing">TEJIDOS CON ALMA · HECHOS PARA DURAR ·</textPath></text>
+          </svg>
+          <svg class="ic badge-ball"><use href="#i-yarn" /></svg>
+        </div>
+
+        <img class="deco deco-branch" src="assets/deco/branch.svg" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+
+    <!-- COLECCIONES — una tarjeta por categoría.
+         Al hacer clic abre Productos ya filtrado en esa categoría.
+         ➕ Para agregar otra: copia un <a class="coleccion">, cambia el
+         nombre de categoría en goToCategory('...') y la foto. -->
+    <section class="colecciones">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Colecciones</p>
+          <h2>Cada creación, una historia <svg class="ic h-heart"><use href="#i-heart" /></svg></h2>
+        </div>
+
+        <div class="coleccion-grid">
+          <!-- 📷 assets/img/coleccion-amigurumis.jpg -->
+          <a class="coleccion" href="#productos" onclick="goToCategory('amigurumis'); return false;">
+            <div class="ph"><img src="assets/img/coleccion-amigurumis.jpg" alt="Amigurumis" loading="lazy" onerror="this.style.display='none'"></div>
+            <span class="coleccion-icon ci-peach"><svg class="ic"><use href="#i-bear" /></svg></span>
+            <strong>Amigurumis</strong>
+            <small>Ver productos</small>
+          </a>
+          <!-- 📷 assets/img/coleccion-ramos.jpg -->
+          <a class="coleccion" href="#productos" onclick="goToCategory('ramos'); return false;">
+            <div class="ph"><img src="assets/img/coleccion-ramos.jpg" alt="Ramos tejidos" loading="lazy" onerror="this.style.display='none'"></div>
+            <span class="coleccion-icon ci-pink"><svg class="ic"><use href="#i-flower" /></svg></span>
+            <strong>Ramos tejidos</strong>
+            <small>Ver productos</small>
+          </a>
+          <!-- 📷 assets/img/coleccion-aretes.jpg -->
+          <a class="coleccion" href="#productos" onclick="goToCategory('aretes'); return false;">
+            <div class="ph"><img src="assets/img/coleccion-aretes.jpg" alt="Aretes" loading="lazy" onerror="this.style.display='none'"></div>
+            <span class="coleccion-icon ci-butter"><svg class="ic"><use href="#i-earring" /></svg></span>
+            <strong>Aretes</strong>
+            <small>Ver productos</small>
+          </a>
+          <!-- 📷 assets/img/coleccion-accesorios.jpg -->
+          <a class="coleccion" href="#productos" onclick="goToCategory('accesorios'); return false;">
+            <div class="ph"><img src="assets/img/coleccion-accesorios.jpg" alt="Accesorios" loading="lazy" onerror="this.style.display='none'"></div>
+            <span class="coleccion-icon ci-sage"><svg class="ic"><use href="#i-leaf" /></svg></span>
+            <strong>Accesorios</strong>
+            <small>Ver productos</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SOBRE MÍ (versión corta) — el texto completo está en "Nosotros" -->
+    <section class="about-teaser">
+      <div class="wrap">
+        <div class="about-card">
+          <img class="deco deco-leaf-l" src="assets/deco/branch.svg" alt="" aria-hidden="true">
+
+          <!-- 📷 assets/img/sobre-mi.jpg (cuadrada, 700×700 px) -->
+          <div class="about-portrait">
+            <div class="ph"><img src="assets/img/sobre-mi.jpg" alt="Soul, creadora de Soul Amigurumii" loading="lazy" onerror="this.style.display='none'"></div>
+            <svg class="ic about-flower"><use href="#i-flower" /></svg>
+          </div>
+
+          <div class="about-text">
+            <p class="eyebrow">Hola, soy Soul <svg class="ic"><use href="#i-heart" /></svg></p>
+            <h2>Tejo recuerdos<br><em>que abrazan</em></h2>
+            <p>Cada amigurumi que creas en mis manos lleva tiempo, dedicación y mucho amor. Mi misión es acompañarte en
+              momentos especiales con algo único y hecho especialmente para ti.</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('nosotros')">Conoce mi historia
+              <svg class="ic"><use href="#i-heart" /></svg></button>
+          </div>
+
+          <!-- 📷 assets/img/polaroid-1.jpg y polaroid-2.jpg -->
+          <div class="about-polaroids">
+            <figure class="mini-polaroid p1"><div class="ph"><img src="assets/img/polaroid-1.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div></figure>
+            <figure class="mini-polaroid p2"><div class="ph"><img src="assets/img/polaroid-2.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- LO MÁS AMADO + razones para elegirnos -->
+    <section class="amado">
+      <div class="wrap amado-layout">
+        <div>
+          <div class="section-head left">
+            <p class="eyebrow">Lo más amado <svg class="ic"><use href="#i-heart" /></svg></p>
+          </div>
+          <!-- Las tarjetas las genera script.js con la lista featuredIds ⬇️
+               (para cambiar cuáles aparecen, edita featuredIds en script.js) -->
+          <div class="featured-grid" id="featured-grid"></div>
+          <div class="center">
+            <button class="btn btn-outline btn-sm" onclick="showSection('productos')">Ver todo el catálogo</button>
+          </div>
+        </div>
+
+        <aside class="values-panel">
+          <p class="eyebrow">¿Por qué Soul Amigurumii?</p>
+          <ul>
+            <li>
+              <span class="value-icon"><svg class="ic"><use href="#i-yarn" /></svg></span>
+              <div><h3>Hecho a mano</h3><p>Cada punto es intencional. No hay dos iguales, y eso hace tu pieza verdaderamente tuya.</p></div>
+            </li>
+            <li>
+              <span class="value-icon"><svg class="ic"><use href="#i-heart" /></svg></span>
+              <div><h3>Con alma propia</h3><p>Cada amigurumi nace con su propia personalidad: compañeros tejidos con emoción.</p></div>
+            </li>
+            <li>
+              <span class="value-icon"><svg class="ic"><use href="#i-gift" /></svg></span>
+              <div><h3>Regalos que conectan</h3><p>No regalas un muñeco: regalas horas de dedicación, cariño y una historia.</p></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </div><!-- /home -->
+
+
+  <!-- ============================================================
+     SECCIÓN: PRODUCTOS
+     Las tarjetas se generan desde script.js (objeto 'products')
+     ============================================================ -->
+  <div id="productos" class="section-hidden">
+    <section class="productos">
+      <div class="wrap">
+        <div class="section-title">
+          <p class="eyebrow">Tienda</p>
+          <h2>Nuestra Colección</h2>
+          <div class="divider"></div>
+          <p>Cada pieza, una historia. Cada hilo, una caricia.</p>
+        </div>
+
+        <!-- Botones de categoría — si agregas una categoría nueva en script.js,
+             agrégala aquí también (copia un <button>, cambia filterCat y data-cat) -->
+        <div class="cat-tabs">
+          <button class="tab active" data-cat="amigurumis" onclick="filterCat('amigurumis', this)">
+            <svg class="ic"><use href="#i-bear" /></svg>Amigurumis</button>
+          <button class="tab" data-cat="ramos" onclick="filterCat('ramos', this)">
+            <svg class="ic"><use href="#i-flower" /></svg>Ramos tejidos</button>
+          <button class="tab" data-cat="aretes" onclick="filterCat('aretes', this)">
+            <svg class="ic"><use href="#i-earring" /></svg>Aretes</button>
+          <button class="tab" data-cat="accesorios" onclick="filterCat('accesorios', this)">
+            <svg class="ic"><use href="#i-leaf" /></svg>Accesorios</button>
+        </div>
+
+        <div class="prod-grid" id="prod-grid"></div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================
+     SECCIÓN: NOSOTROS
+     ============================================================ -->
+  <div id="nosotros" class="section-hidden">
+    <section class="nosotros">
+      <div class="wrap">
+        <div class="section-title">
+          <p class="eyebrow">Sobre mí</p>
+          <h2>Nuestra historia</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="nosotros-inner">
+
+          <!-- 📷 assets/img/foto-taller.jpg (vertical, 800×900 px) -->
+          <div class="nosotros-visual">
+            <div class="ph"><img src="assets/img/foto-taller.jpg" alt="Taller Soul Amigurumii" loading="lazy" onerror="this.style.display='none'"></div>
+            <span class="tape"></span>
+            <svg class="ic nv-flower"><use href="#i-flower" /></svg>
+          </div>
+
+          <div class="nosotros-text">
+            <h2>Tejida con propósito</h2>
+            <p>Soul Amigurumii nació de un hilo y un sueño: crear piezas que no solo se vean bonitas, sino que se <em
+                class="serif">sientan</em> especiales. Cada amigurumi lleva consigo horas de dedicación, amor y un toque
+              de magia.</p>
+            <p>Empezamos tejiendo para regalar. Hoy tejemos para conectar personas con objetos que tienen alma. Porque
+              creemos que los mejores regalos son los que alguien hizo pensando en ti.</p>
+            <p>Aquí no hay producción en masa. Hay paciencia, hilo y corazón en cada puntada.</p>
+            <div class="firma">con amor, Soul Amigurumii</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================
+     SECCIÓN: PROMOCIONES
+     Edita cada .promo-card directamente aquí
+     ============================================================ -->
+  <div id="promos" class="section-hidden">
+    <section class="promos">
+      <div class="wrap">
+        <div class="section-title">
+          <p class="eyebrow">Promos</p>
+          <h2>Ofertas especiales</h2>
+          <div class="divider"></div>
+          <p>Poquito tiempo, mucho amor. ¡No te los pierdas!</p>
+        </div>
+        <div class="promo-grid">
+
+          <div class="promo-card promo-pink">
+            <span class="promo-tag tag-pink">Tiempo limitado</span>
+            <h3>Dúo amigurumi</h3>
+            <div class="discount">20% OFF</div>
+            <p>Lleva dos amigurumis y uno va con descuento especial. Perfectos para regalar de a par.</p>
+            <button class="btn btn-primary" onclick="showSection('contacto')">¡Lo quiero!</button>
+          </div>
+
+          <div class="promo-card promo-sage">
+            <span class="promo-tag tag-sage">Edición limitada</span>
+            <h3>Ramo de luna</h3>
+            <div class="discount">Nuevo</div>
+            <p>Nuestra colección de ramos tejidos en tonos nocturnos: lila, azul polvo y blanco perla.</p>
+            <button class="btn btn-pink" onclick="showSection('productos')">Ver colección</button>
+          </div>
+
+          <div class="promo-card promo-peach">
+            <span class="promo-tag tag-butter">Para ti</span>
+            <h3>Sorpresa tejida</h3>
+            <div class="discount">Desde $25k</div>
+            <p>¿No sabes qué pedir? Déjanos sorprenderte con un set de aretes + clip que amará tu corazón.</p>
+            <button class="btn btn-outline" onclick="showSection('custom')">Pedir sorpresa</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================
+     SECCIÓN: PERSONALIZADOS
+     ============================================================ -->
+  <div id="custom" class="section-hidden">
+    <section class="personalizados">
+      <div class="wrap">
+        <div class="section-title">
+          <p class="eyebrow">Personalizados</p>
+          <h2>Pedidos personalizados</h2>
+          <div class="divider"></div>
+          <p>Porque a veces el regalo perfecto hay que crearlo desde cero</p>
+        </div>
+
+        <div class="custom-box">
+          <span class="custom-icon"><svg class="ic"><use href="#i-yarn" /></svg></span>
+          <h3>Hecho especialmente para ti</h3>
+          <p>¿Tienes en mente algo especial? ¿Un personaje favorito, unos colores particulares, una idea loca pero
+            tierna? Cuéntanos y lo convertimos en realidad, un punto a la vez.</p>
+
+          <div class="steps">
+            <div class="step"><span class="num">1</span>
+              <p>Cuéntanos tu idea o inspiración</p>
+            </div>
+            <div class="step"><span class="num">2</span>
+              <p>Cotizamos y acordamos detalles</p>
+            </div>
+            <div class="step"><span class="num">3</span>
+              <p>Lo tejemos con todo el amor</p>
+            </div>
+          </div>
+
+          <p class="custom-note">Tiempo de entrega estimado: 7 a 15 días hábiles según la pieza</p>
+          <button class="btn btn-primary btn-lg" onclick="showSection('contacto')">Quiero pedir el mío
+            <svg class="ic"><use href="#i-heart" /></svg></button>
+        </div>
+
+        <div class="section-title" style="margin-top: 5rem;">
+          <p class="eyebrow">Galería</p>
+          <h2>Creaciones recientes</h2>
+          <div class="divider"></div>
+          <p>Inspiración tejida para tu próximo pedido</p>
+        </div>
+
+        <!-- 📷 assets/img/personalizado-1.jpg, -2.jpg, -3.jpg (horizontal, 600×500 px) -->
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-img ph"><img src="assets/img/personalizado-1.jpg" alt="Amigurumi 15cm" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-info">
+              <h4>Amigurumi 15cm</h4>
+              <p>Diseño exclusivo</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img ph"><img src="assets/img/personalizado-2.jpg" alt="Amigurumi Personalizado" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-info">
+              <h4>Amigurumi Personalizado</h4>
+              <p>Réplica de familia en amigurumi</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img ph"><img src="assets/img/personalizado-3.jpg" alt="Princesa Rapunzel" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-info">
+              <h4>Princesa Rapunzel</h4>
+              <p>Coleccion princesas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================
+     SECCIÓN: CONTACTO
+     ============================================================ -->
+  <div id="contacto" class="section-hidden">
+    <section class="contacto">
+      <div class="wrap">
+        <div class="section-title">
+          <p class="eyebrow">Contacto</p>
+          <h2>Hablemos</h2>
+          <div class="divider"></div>
+          <p>Estamos aquí con los hilos listos y el corazón abierto</p>
+        </div>
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <h3>Escríbenos</h3>
+            <p>Respuesta rápida y con cariño. ¡No hay pregunta pequeña!</p>
+            <div class="social-row">
+              <a href="https://wa.me/573009749120" target="_blank" rel="noopener" class="social-btn wa">
+                <svg class="ic"><use href="#i-whatsapp" /></svg>WhatsApp
+              </a>
+              <a href="https://instagram.com/soul_amigurumii" target="_blank" rel="noopener" class="social-btn ig">
+                <svg class="ic"><use href="#i-instagram" /></svg>Instagram
+              </a>
+              <a href="https://tiktok.com/@soul_amigurumii" target="_blank" rel="noopener" class="social-btn tk">
+                <svg class="ic"><use href="#i-tiktok" /></svg>TikTok
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Déjanos tu mensaje</h3>
+            <!-- handleForm() en script.js abre WhatsApp con el mensaje escrito -->
+            <form onsubmit="handleForm(event)">
+              <input type="text" id="f-name" placeholder="Tu nombre" required>
+              <input type="text" id="f-subject" placeholder="¿Qué necesitas?">
+              <textarea id="f-msg" placeholder="Cuéntanos todo..." required></textarea>
+              <button type="submit" class="btn btn-primary btn-block">Enviar con amor
+                <svg class="ic"><use href="#i-heart" /></svg></button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================================
+     FOOTER — pie de página (borde ondulado hecho con CSS)
+     ============================================================ -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" onclick="showSection('home')">
+          <span class="logo-soul">Soul</span>
+          <svg class="ic logo-ball"><use href="#i-yarn" /></svg>
+          <span class="logo-sub">&amp;Amigurumii</span>
+        </a>
+        <p>El arte de dar vida en cada puntada.<br>Amigurumis tejidos a mano con amor.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a onclick="showSection('productos')">Productos</a>
+        <a onclick="showSection('nosotros')">Nosotros</a>
+        <a onclick="showSection('promos')">Promos</a>
+        <a onclick="showSection('custom')">Personalizados</a>
+        <a onclick="showSection('contacto')">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sigue</h4>
+        <div class="footer-social">
+          <a href="https://instagram.com/soul_amigurumii" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram" /></svg></a>
+          <a href="https://tiktok.com/@soul_amigurumii" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tiktok" /></svg></a>
+          <a href="https://wa.me/573009749120" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#i-whatsapp" /></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-cta">
+        <h4>Hablemos</h4>
+        <p>¿Tienes una idea especial?<br>Escríbeme y la hacemos realidad.</p>
+        <a class="btn btn-outline btn-sm" href="https://wa.me/573009749120" target="_blank" rel="noopener">Escríbeme por WhatsApp
+          <svg class="ic"><use href="#i-heart" /></svg></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Soul Amigurumii · Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- ============================================================
+     CARRITO Y NOTIFICACIONES
+     ============================================================ -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-header">
+      <h3>Tu pedido</h3>
+      <button class="close-cart" onclick="toggleCart()" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="cart-body">
+      <div id="cart-items" class="cart-items">
+        <!-- Los items del carrito se renderizan aquí con JS -->
+      </div>
+
+      <div class="cart-options">
+        <h4>Personaliza tu pedido</h4>
+        <label class="checkbox-label">
+          <input type="checkbox" id="cart-opt-premium" onchange="renderCart()">
+          Empaque premium personalizado (+$5.000)
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="cart-opt-card" onchange="renderCart()">
+          Tarjeta personalizada (sin costo)
+        </label>
+        <textarea id="cart-msg" class="cart-msg" placeholder="Mensaje especial o dedicatoria..."></textarea>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-box">
+        <span>Total estimado:</span>
+        <span class="cart-total" id="cart-total">$0</span>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="generateWhatsAppMessage()">Finalizar pedido</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Producto agregado 💖</div>
+
+  <!-- Barra flotante carrito móvil -->
+  <div class="floating-cart-bar" id="floating-cart-bar" onclick="toggleCart()">
+    <div id="floating-cart-total">0 productos | $0</div>
+    <button class="btn btn-primary btn-sm">Ver carrito</button>
+  </div>
+
+  <!-- 🧠 JAVASCRIPT — se carga al final para que la página cargue más rápido -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
